@@ -14,6 +14,8 @@
 
 @implementation ExpandTableView
 
+static NSString * const cellId = @"cellId";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -40,7 +42,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
  
  
     return cell;

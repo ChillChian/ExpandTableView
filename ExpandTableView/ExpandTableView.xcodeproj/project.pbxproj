@@ -13,7 +13,7 @@
 		27A482D12012D77200850DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A482CF2012D77200850DA3 /* LaunchScreen.storyboard */; };
 		27A482D42012D77200850DA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A482D32012D77200850DA3 /* main.m */; };
 		27A482DC2012D81B00850DA3 /* ExpandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A482DB2012D81B00850DA3 /* ExpandTableView.m */; };
-		27A482DF2012D8AB00850DA3 /* ExpandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A482DE2012D8AB00850DA3 /* ExpandModel.m */; };
+		27A482DF2012D8AB00850DA3 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A482DE2012D8AB00850DA3 /* ListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		27A482D32012D77200850DA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27A482DA2012D81B00850DA3 /* ExpandTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpandTableView.h; sourceTree = "<group>"; };
 		27A482DB2012D81B00850DA3 /* ExpandTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpandTableView.m; sourceTree = "<group>"; };
-		27A482DD2012D8AB00850DA3 /* ExpandModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpandModel.h; sourceTree = "<group>"; };
-		27A482DE2012D8AB00850DA3 /* ExpandModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpandModel.m; sourceTree = "<group>"; };
+		27A482DD2012D8AB00850DA3 /* ListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
+		27A482DE2012D8AB00850DA3 /* ListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,8 @@
 			children = (
 				27A482DA2012D81B00850DA3 /* ExpandTableView.h */,
 				27A482DB2012D81B00850DA3 /* ExpandTableView.m */,
-				27A482DD2012D8AB00850DA3 /* ExpandModel.h */,
-				27A482DE2012D8AB00850DA3 /* ExpandModel.m */,
+				27A482DD2012D8AB00850DA3 /* ListModel.h */,
+				27A482DE2012D8AB00850DA3 /* ListModel.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A482D42012D77200850DA3 /* main.m in Sources */,
-				27A482DF2012D8AB00850DA3 /* ExpandModel.m in Sources */,
+				27A482DF2012D8AB00850DA3 /* ListModel.m in Sources */,
 				27A482C62012D77200850DA3 /* AppDelegate.m in Sources */,
 				27A482DC2012D81B00850DA3 /* ExpandTableView.m in Sources */,
 			);
