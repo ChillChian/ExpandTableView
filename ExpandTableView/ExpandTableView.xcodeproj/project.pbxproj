@@ -14,6 +14,7 @@
 		27A482D42012D77200850DA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A482D32012D77200850DA3 /* main.m */; };
 		27A482DC2012D81B00850DA3 /* ExpandTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A482DB2012D81B00850DA3 /* ExpandTableView.m */; };
 		27A482DF2012D8AB00850DA3 /* ListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A482DE2012D8AB00850DA3 /* ListModel.m */; };
+		27A482F12018C81000850DA3 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A482F02018C81000850DA3 /* ListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		27A482DB2012D81B00850DA3 /* ExpandTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpandTableView.m; sourceTree = "<group>"; };
 		27A482DD2012D8AB00850DA3 /* ListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListModel.h; sourceTree = "<group>"; };
 		27A482DE2012D8AB00850DA3 /* ListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListModel.m; sourceTree = "<group>"; };
+		27A482EF2018C81000850DA3 /* ListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		27A482F02018C81000850DA3 /* ListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				27A482DB2012D81B00850DA3 /* ExpandTableView.m */,
 				27A482DD2012D8AB00850DA3 /* ListModel.h */,
 				27A482DE2012D8AB00850DA3 /* ListModel.m */,
+				27A482EF2018C81000850DA3 /* ListCell.h */,
+				27A482F02018C81000850DA3 /* ListCell.m */,
 			);
 			name = TableView;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				27A482D42012D77200850DA3 /* main.m in Sources */,
 				27A482DF2012D8AB00850DA3 /* ListModel.m in Sources */,
 				27A482C62012D77200850DA3 /* AppDelegate.m in Sources */,
+				27A482F12018C81000850DA3 /* ListCell.m in Sources */,
 				27A482DC2012D81B00850DA3 /* ExpandTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

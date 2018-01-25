@@ -7,6 +7,7 @@
 //
 
 #import "ExpandTableView.h"
+#import "ListModel.h"
 
 @interface ExpandTableView ()
 
