@@ -19,7 +19,13 @@ static NSString * const cellId = @"cellId";
     [super viewDidLoad];
     [self.tableView reloadData];
     self.tableView.backgroundColor = [UIColor whiteColor];
-    // 下面这些设置为了刷新时不会出现抖动现象
+    
+    [self configTableView];
+ 
+}
+
+// 下面这些设置为了刷新时不会出现抖动现象
+- (void)configTableView {
     self.tableView.rowHeight = 52;
     self.tableView.estimatedRowHeight =0;
     self.tableView.tableHeaderView = [[UIView alloc] init];

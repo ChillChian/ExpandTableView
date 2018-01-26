@@ -17,7 +17,7 @@
 @property (nonatomic,weak)ListModel *superModel; // 记录之前是哪个元素的孩子节点，要用weak避免循环引用
 @property (nonatomic,strong)NSArray<ListModel *> *subListModel;
 
-// 对模型进行展开，为了数据结构和TableView的cell一直
+// 对模型进行展开，为了数据结构和TableView的cell一致
 - (NSArray *)open;
 // 把模型进行关闭
 - (void)closeWithSubModels:(NSArray *)subModels;
