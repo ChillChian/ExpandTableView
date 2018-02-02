@@ -22,6 +22,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self configListVC];
+    [self loadData];
 }
 
 // 初始化子控制器，可拓展为可左右滑动切换的多控制器。
@@ -34,19 +35,245 @@
     self.listVC = listVC;
 }
 
+// 进行加载数据，网络请求之类的,模拟的
+- (void)loadData {
+    // 随便初始化一组数据
+    NSArray *dataArr = @[@{
+                             @"showName" : @"Beijing",
+                             @"Id" : @"0",
+                             @"Level" : @"0",
+                             @"subListModel" : @[@{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"0-0",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[@{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"0-0-0",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[@{
+                                                                                                     @"showName" : @"",
+                                                                                                     @"Id" : @"0-0-0-0",
+                                                                                                     @"Level" : @"3",
+                                                                                                     @"subListModel" : @[]
+                                                                                                     },
+                                                                                                 @{
+                                                                                                     @"showName" : @"",
+                                                                                                     @"Id" : @"0-0-0-1",
+                                                                                                     @"Level" : @"3",
+                                                                                                     @"subListModel" : @[]
+                                                                                                     }]
+                                                                             },
+                                                                         @{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"0-0-1",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[]
+                                                                             }]
+                                                     },
+                                                 @{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"0-1",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     }]
+                             },
+                         @{
+                             @"showName" : @"",
+                             @"Id" : @"1",
+                             @"Level" : @"0",
+                             @"subListModel" : @[@{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"1-0",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[@{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"1-0-0",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[@{
+                                                                                                     @"showName" : @"",
+                                                                                                     @"Id" : @"1-0-0-0",
+                                                                                                     @"Level" : @"3",
+                                                                                                     @"subListModel" : @[]
+                                                                                                     },
+                                                                                                 @{
+                                                                                                     @"showName" : @"",
+                                                                                                     @"Id" : @"1-0-0-1",
+                                                                                                     @"Level" : @"3",
+                                                                                                     @"subListModel" : @[]
+                                                                                                     }]
+                                                                             },
+                                                                         @{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"1-0-1",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[]
+                                                                             }]
+                                                     },
+                                                 @{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"1-1",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     }]
+                             },
+                         @{
+                             @"showName" : @"",
+                             @"Id" : @"2",
+                             @"Level" : @"0",
+                             @"subListModel" : @[@{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"2-0",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[@{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"2-0-0",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[@{
+                                                                                                     @"showName" : @"",
+                                                                                                     @"Id" : @"2-0-0-0",
+                                                                                                     @"Level" : @"3",
+                                                                                                     @"subListModel" : @[]
+                                                                                                     },
+                                                                                                 @{
+                                                                                                     @"showName" : @"",
+                                                                                                     @"Id" : @"2-0-0-1",
+                                                                                                     @"Level" : @"3",
+                                                                                                     @"subListModel" : @[]
+                                                                                                     }]
+                                                                             },
+                                                                         @{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"2-0-1",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[]
+                                                                             }]
+                                                     },
+                                                 @{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"2-1",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     }]
+                             },
+                         @{
+                             @"showName" : @"",
+                             @"Id" : @"3",
+                             @"Level" : @"0",
+                             @"subListModel" : @[@{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"3-0",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[@{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"3-0-0",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[@{
+                                                                                                     @"showName" : @"",
+                                                                                                     @"Id" : @"3-0-0-0",
+                                                                                                     @"Level" : @"3",
+                                                                                                     @"subListModel" : @[]
+                                                                                                     },
+                                                                                                 @{
+                                                                                                     @"showName" : @"",
+                                                                                                     @"Id" : @"3-0-0-1",
+                                                                                                     @"Level" : @"3",
+                                                                                                     @"subListModel" : @[]
+                                                                                                     }]
+                                                                             },
+                                                                         @{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"3-0-1",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[]
+                                                                             }]
+                                                     },
+                                                 @{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"3-1",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     }]
+                             },
+                         @{
+                             @"showName" : @"",
+                             @"Id" : @"4",
+                             @"Level" : @"0",
+                             @"subListModel" : @[@{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"4-0",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     },
+                                                 @{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"4-1",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     }]
+                             },
+                         @{
+                             @"showName" : @"",
+                             @"Id" : @"5",
+                             @"Level" : @"0",
+                             @"subListModel" : @[@{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"5-0",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     },
+                                                 @{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"5-1",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     }]
+                             },
+                         @{
+                             @"showName" : @"",
+                             @"Id" : @"6",
+                             @"Level" : @"0",
+                             @"subListModel" : @[@{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"6-0",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[]
+                                                     },
+                                                 @{
+                                                     @"showName" : @"",
+                                                     @"Id" : @"6-1",
+                                                     @"Level" : @"1",
+                                                     @"subListModel" : @[@{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"6-1-0",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[]
+                                                                             },
+                                                                         @{
+                                                                             @"showName" : @"",
+                                                                             @"Id" : @"6-1-1",
+                                                                             @"Level" : @"2",
+                                                                             @"subListModel" : @[]
+                                                                             }]
+                                                     }]
+                             }];
+    
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
