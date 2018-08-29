@@ -7,6 +7,7 @@
 //
 
 #import "ListModel.h"
+#import "RespModel.h"
 
 @implementation ListModel
 
@@ -25,6 +26,11 @@
 - (void)setBelowCount:(NSInteger)belowCount {
     self.superModel.belowCount += (belowCount - _belowCount);
     _belowCount = belowCount;
+}
+
+- (instancetype)initWithResp:(RespModel *)resp {
+    ListModel *model = [[ListModel alloc] init];
+    return model;
 }
 
 @end
