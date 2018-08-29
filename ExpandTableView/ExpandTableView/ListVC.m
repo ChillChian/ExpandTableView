@@ -8,6 +8,7 @@
 
 #import "ListVC.h"
 #import "ListCell.h"
+#import "ListModel.h"
 
 @interface ListVC ()
 
@@ -35,10 +36,6 @@ static NSString * const cellId = @"cellId";
     [self.tableView registerClass:[ListCell class] forCellReuseIdentifier:cellId];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
@@ -52,7 +49,13 @@ static NSString * const cellId = @"cellId";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    cell.textLabel.text = self.modelArr[indexPath.row].showName;
     return cell;
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end
