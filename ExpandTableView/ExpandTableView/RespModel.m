@@ -7,9 +7,12 @@
 //
 
 #import "RespModel.h"
+#import "MJExtension.h"
 
 @implementation RespModel
 
-
++ (NSDictionary *)mj_objectClassInArray {
+    return @{@"subListModel" : [RespModel class]};
+}
 
 @end

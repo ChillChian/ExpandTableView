@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ListModel;
 
 @interface ListCell : UITableViewCell
+
+- (void)cellWithModel:(ListModel *)model;
 
 @end

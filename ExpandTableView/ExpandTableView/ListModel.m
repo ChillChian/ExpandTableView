@@ -32,6 +32,16 @@
     ListModel *model = [[ListModel alloc] init];
     model.showName = resp.showName;
     model.Id = resp.Id;
+    model.Level = resp.Level.integerValue;
+    if (resp.subListModel.count != 0) {
+        NSMutableArray<ListModel *> *subModelArr = [NSMutableArray array];
+        for (RespModel *subResp in resp.subListModel) {
+            ListModel *subModel = [[ListModel alloc] initWithResp:subResp];
+            subModel.superModel = model;
+            [subModelArr addObject:subModel];
+        }
+        model.subListModel = subModelArr;
+    }
     return model;
 }
 
