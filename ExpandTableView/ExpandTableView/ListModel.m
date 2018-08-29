@@ -30,6 +30,8 @@
 
 - (instancetype)initWithResp:(RespModel *)resp {
     ListModel *model = [[ListModel alloc] init];
+    model.showName = resp.showName;
+    model.Id = resp.Id;
     return model;
 }
 

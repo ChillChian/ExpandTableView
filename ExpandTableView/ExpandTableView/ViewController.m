@@ -10,6 +10,7 @@
 #import "ListVC.h"
 #import "ListModel.h"
 #import "RespModel.h"
+#import "MJExtension.h"
 
 @interface ViewController ()
 
@@ -39,7 +40,7 @@
 
 // 进行加载数据，网络请求之类的,模拟的
 - (void)loadData {
-    // 随便初始化一组数据,获取到数据之后，需要字典数组转数组模型。这步我们这边省略。直接生成模型数组。
+    // 随便初始化一组数据,获取到数据之后，需要字典数组转数组模型。
     
     NSArray *dataArr = @[@{
                              @"showName" : @"Beijing",
@@ -259,8 +260,12 @@
                                                                              }]
                                                      }]
                              }];
+    
+    NSArray<RespModel *> *respModelArr = [RespModel mj_objectArrayWithKeyValuesArray:dataArr];
+    
+    // 这里需要转换成自己需要的数组模型，可以和上一步合到一起。
     NSMutableArray *modelArr = [NSMutableArray array];
-    for (RespModel *resp in dataArr) {
+    for (RespModel *resp in respModelArr) {
         ListModel *model = [[ListModel alloc] initWithResp:resp];
         [modelArr addObject:model];
     }

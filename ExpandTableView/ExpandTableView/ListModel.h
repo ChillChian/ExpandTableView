@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class RespModel;
 
 @interface ListModel : NSObject
 
@@ -18,7 +19,7 @@
 @property (nonatomic,strong)NSArray<ListModel *> *subListModel;
 
 // 数据数组转模型数组
-- (instancetype)initWithResp:(NSArray *)resp;
+- (instancetype)initWithResp:(RespModel *)resp;
 // 对模型进行展开，为了数据结构和TableView的cell一致
 - (NSArray *)open;
 // 把模型进行关闭
